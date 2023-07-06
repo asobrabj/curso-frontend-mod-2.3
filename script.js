@@ -58,12 +58,14 @@ teclasOp.forEach((elem)=>{
 tcl.addEventListener("click",(evt)=>{
     sinal=false
     decimal=false
-    display.innerHTML="0"
+    display.innerHTML=''
+    display.innerHTML=0
 })
 
 tigual.addEventListener("click",(evt)=>{
     sinal=false
     decimal=false
     const result = eval(display.innerHTML)
+    display.innerHTML=''
     display.innerHTML=result
 })

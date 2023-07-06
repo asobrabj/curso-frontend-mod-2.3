@@ -55,8 +55,42 @@
         </div>
 
     </div>
+    
 
+    <script>
+        const mapaTeclado = {
+            '0' : 't0',
+            '1' : 't1',
+            '2' : 't2',
+            '3' : 't3',
+            '4' : 't4',
+            '5' : 't5',
+            '6' : 't6',
+            '7' : 't7',
+            '8' : 't8',
+            '9' : 't9',
+            '(' : 't(',
+            ')' : 't)',
+            ',' : 't,',
+            '+' : 't+',
+            '-' : 't-',
+            '*' : 'tx',
+            '/' : 't/',
+            '=' : 't=',
+            ',' : 't,',
+            'Enter' : 't=',
+            'Backspace' : 'tcl',
+            'c' : 'tcl',
+            'Delete' : 'tcl'
+        }
+        const mapearTeclado = (evento)=>{
+            const tecla = evento.key;
+            const teclaPermitida = () => Object.keys(mapaTeclado).indexOf(tecla) != -1;
+            if (teclaPermitida()) document.getElementById(mapaTeclado[tecla]).click();
+        }
+        document.addEventListener('keydown', mapearTeclado);
 
+    </script>
     <script src="./script.js"></script>
 </body>
 
